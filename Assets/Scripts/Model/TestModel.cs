@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using System;
 
 namespace Model
 {
@@ -10,12 +12,22 @@ namespace Model
     public class TestModel : MonoBehaviour
     {
         /// <summary>
-        /// 値をログ表示
+        /// 値のReactiveProperty
         /// </summary>
-        /// <param name="Value">ログ表示する値</param>
-        private void ShowValue(float Value)
+        private ReactiveProperty<float> ValueProperty = new ReactiveProperty<float>(0.0f);
+
+        /// <summary>
+        /// 値
+        /// </summary>
+        public IReadOnlyReactiveProperty<float> Value => ValueProperty;
+
+        /// <summary>
+        /// 値をセット
+        /// </summary>
+        /// <param name="NewValue">新しい値</param>
+        public void SetValue(float NewValue)
         {
-            Debug.Log(string.Format("Value:{0}", Value));
+            ValueProperty.Value = NewValue;
         }
     }
 }
