@@ -17,12 +17,6 @@ namespace View
         private Slider ValueSlider = null;
 
         /// <summary>
-        /// スライダーの値
-        /// </summary>
-        [SerializeField]
-        private Text SliderValueText = null;
-
-        /// <summary>
         /// スライダーの値を外に放り投げるボタン
         /// </summary>
         [SerializeField]
