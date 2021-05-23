@@ -7,9 +7,21 @@ using System;
 namespace Model
 {
     /// <summary>
+    /// Modelのインタフェース
+    /// </summary>
+    public interface ITestModel
+    {
+        /// <summary>
+        /// 値をセット
+        /// </summary>
+        /// <param name="NewValue">新しい値</param>
+        void SetValue(float NewValue);
+    }
+
+    /// <summary>
     /// Model
     /// </summary>
-    public class TestModel : MonoBehaviour
+    public class TestModel : MonoBehaviour, ITestModel
     {
         /// <summary>
         /// 値のReactiveProperty
