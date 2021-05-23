@@ -867,6 +867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1482311728}
   - component: {fileID: 1482311729}
+  - component: {fileID: 1482311730}
   m_Layer: 5
   m_Name: TestView
   m_TagString: Untagged
@@ -908,8 +909,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueSlider: {fileID: 541338172}
-  SliderValueText: {fileID: 0}
   SliderValueSendButton: {fileID: 671950269}
+--- !u!114 &1482311730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482311727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbd43d32cdd35545b807d27e1c6c218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1488443415
 GameObject:
   m_ObjectHideFlags: 0
