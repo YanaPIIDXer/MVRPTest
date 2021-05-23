@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using System;
+using UniRx.Operators;
 
 namespace Model
 {
@@ -44,8 +45,9 @@ namespace Model
 
         void Awake()
         {
-            Value.Subscribe((v) => Debug.Log(v))
-                .AddTo(gameObject);
+            Value.Skip(1)
+                 .Subscribe((v) => Debug.Log(v))
+                 .AddTo(gameObject);
         }
     }
 }
