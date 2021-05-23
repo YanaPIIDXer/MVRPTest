@@ -17,7 +17,8 @@ namespace Presenter
         /// <summary>
         /// View
         /// </summary>
-        private TestView View = null;
+        [Inject]
+        private ITestView View = null;
 
         /// <summary>
         /// Model
@@ -27,7 +28,6 @@ namespace Presenter
 
         void Awake()
         {
-            View = GetComponent<TestView>();
             View.OnValueSend
                 .Select((Value) => Value * 100)
                 .Subscribe(Model.SetValue)
