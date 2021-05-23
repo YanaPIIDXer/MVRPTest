@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
+using System;
 
 namespace View
 {
@@ -21,5 +23,11 @@ namespace View
         /// </summary>
         [SerializeField]
         private Button SliderValueSendButton = null;
+
+        /// <summary>
+        /// 値が送信された
+        /// </summary>
+        public IObservable<float> OnValueSend => SliderValueSendButton.OnClickAsObservable()
+                                                                .Select((_) => ValueSlider.value);
     }
 }
