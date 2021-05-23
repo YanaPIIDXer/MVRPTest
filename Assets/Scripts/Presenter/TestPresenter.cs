@@ -32,6 +32,10 @@ namespace Presenter
                 .Select((Value) => Value * 100)
                 .Subscribe(Model.SetValue)
                 .AddTo(gameObject);
+
+            Model.Value
+                .Subscribe(View.SetTextValue)
+                .AddTo(gameObject);
         }
     }
 }

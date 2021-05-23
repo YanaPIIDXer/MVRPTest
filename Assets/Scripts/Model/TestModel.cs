@@ -17,6 +17,12 @@ namespace Model
         /// </summary>
         /// <param name="NewValue">新しい値</param>
         void SetValue(float NewValue);
+
+        /// <summary>
+        /// 値
+        /// </summary>
+        /// <value></value>
+        IReadOnlyReactiveProperty<float> Value { get; }
     }
 
     /// <summary>
