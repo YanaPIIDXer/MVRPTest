@@ -29,6 +29,7 @@ namespace Presenter
         {
             View = GetComponent<TestView>();
             View.OnValueSend
+                .Select((Value) => Value * 100)
                 .Subscribe(Model.SetValue)
                 .AddTo(gameObject);
         }
