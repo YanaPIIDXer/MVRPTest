@@ -29,5 +29,11 @@ namespace Model
         {
             ValueProperty.Value = NewValue;
         }
+
+        void Awake()
+        {
+            Value.Subscribe((v) => Debug.Log(v))
+                .AddTo(gameObject);
+        }
     }
 }
