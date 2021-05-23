@@ -8,9 +8,20 @@ using System;
 namespace View
 {
     /// <summary>
+    /// Viewのインタフェース
+    /// </summary>
+    public interface ITestView
+    {
+        /// <summary>
+        /// 値が送信された
+        /// </summary>
+        IObservable<float> OnValueSend { get; }
+    }
+
+    /// <summary>
     /// View
     /// </summary>
-    public class TestView : MonoBehaviour
+    public class TestView : MonoBehaviour, ITestView
     {
         /// <summary>
         /// スライダー
